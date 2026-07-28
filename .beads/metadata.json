@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "pcs_spoiler_block",
+  "project_id": "ad587616-c6d1-420b-bc03-fc747f5a3268"
+}
