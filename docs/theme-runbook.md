@@ -48,12 +48,15 @@ export const <NAME>_THEME_CSS = `
 | Navigation | `ul.topnav`, `ul.topnav li a`, dropdowns |
 | Section headers | `.h4bar`, `.h4bar h4` |
 | Headings | `h1, h2, h3, h4, h5` |
-| Tables | `table`, `th`, `td`, `thead`, alternating rows, hover, rank-1 row |
+| Tables | `table`, `tr`, `th`, `td`, `thead`, alternating rows, hover, rank-1 row. Must include `tr { border-color }` — table rows have their own borders independent of `td`. |
 | Links | `a`, `a:hover`, `a:visited`, `.ridername a`, `.team a` |
 | Data cells | `.ar`, `.rnk`, `.time`, `.gap`, `td:first-child` |
 | Status classes | `.dnf`, `.dns`, `.otl` |
-| Ranking/stat bars | `div.valuebar` (container), `div.bg.orange` / `div.bg.yellow` / `div.bg.green` (bar fill), `.valuebar .title` (number label). Structure: `.valuebar > .bg[color class] + .title`. Do NOT override `div.bg.red` — used for team-specific jersey colors. |
-| Homepage results | `ul.hp2-results`, `li.race` |
+| Homepage popularity bars | `div.valuebar` (container bg), `div.bg.orange` / `div.bg.yellow` / `div.bg.green` (bar fills), `.valuebar .title` (number label). Do NOT override `div.bg.red` — used for team-specific jersey colors. |
+| Rider specialty bars | Different classes from homepage bars. Structure: `li > div.xbar > div.valuebar > div.bg.[color].left` + `div.xvalue` (number) + `div.xtitle > a` (label). Color classes: `green2` (Onedayraces), `red` (GC — leave unthemed, jersey collision), `blue` (TT), `orange` (Sprint — shared with homepage), `purple1` (Climber), `pink` (Hills). Also style `.xvalue` (number color) and `.xtitle a` (label link). |
+| Homepage results | `ul.hp2-results`, `li.race`, `li.race a span` (stage subtitle — has inline `style="color:#1f8acc"`, needs explicit override) |
+| Homepage games widget | `ul.hp-games`, `ul.hp-games li`, `ul.hp-games li a` (soon-closing fantasy games list) |
+| Result card buttons | `a.goto-race` (View Results, GC buttons), `a.goto-race.livestats` (LiveStats button — different color). Set `display:inline-block`, `text-decoration:none`, border on hover. |
 | Buttons | `.btn`, `button`, `input[type=submit]`, `li.follow-up a` (widget footer buttons: "PCS Ranking", "Popular Riders", etc) |
 | Sidebar/panels | `.sidebar`, `.right-bar`, `aside` |
 | Forms/inputs | `input[type=text]`, `select`, `textarea` |
@@ -147,10 +150,16 @@ Test on each page type before shipping. Toggle theme on and off on each — off 
 - [ ] Body background is themed (no white flash)
 - [ ] Nav links readable and hoverable
 - [ ] h4bar headers: dark bg, gold left border, white text
-- [ ] Tables: alternating rows visible, rank 1 has gold left border
+- [ ] Tables: alternating rows visible, rank 1 has gold left border, no white row separators
 - [ ] Rider names: gold, readable on all backgrounds
 - [ ] Team names: muted, distinct from rider names
-- [ ] Ranking bars: muted, text readable (not white-on-white or dark-on-dark)
+- [ ] Homepage popularity bars (`div.bg.orange/yellow/green`): solid fill, dark text readable
+- [ ] Rider specialty bars (`div.bg.green2/blue/purple1/pink/orange`): all six specialties have correct color, `.xvalue` number readable, `.xtitle a` label visible
+- [ ] GC bar (`div.bg.red`): intentionally left unthemed (team jersey collision)
+- [ ] Homepage result cards: `a.goto-race` buttons styled (dark surface, gold border on hover), `a.goto-race.livestats` green variant
+- [ ] Stage subtitle link (inline cyan `#1f8acc`): overridden to gold
+- [ ] Soon-closing games widget (`ul.hp-games`): themed, links readable
+- [ ] Widget footer buttons (`li.follow-up a`): "PCS Ranking", "Popular Riders" etc styled
 - [ ] Buttons: themed, hover state works
 - [ ] Links: gold on hover, visited state distinct
 - [ ] DNF/DNS: red
