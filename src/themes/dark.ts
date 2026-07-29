@@ -162,10 +162,10 @@ li.follow-up a:hover {
 .valuebar { background: #1a2030 !important; }
 .valuebar .bg,
 div.bg.orange, div.bg.yellow, div.bg.green {
-  background: #253040 !important;
+  background: #332800 !important;
 }
 .valuebar .title {
-  color: #8896a8 !important;
+  color: #c8a200 !important;
 }
 
 /* ── SIDEBAR / PANELS ────────────────────────────────────── */
