@@ -228,6 +228,24 @@ li:has(.xbar) { border-color: #3a4556 !important; }
 .xtitle a { color: #8896a8 !important; }
 .xtitle a:hover { color: #e8b400 !important; }
 
+/* ── RIDER SEASON NAV (ul.rdrSeasonNav) ──────────────────── */
+ul.rdrSeasonNav li a.rdrFilterSeason {
+  background: #252d3a !important;
+  color: #8896a8 !important;
+  border: 1px solid #3a4556 !important;
+  text-decoration: none !important;
+}
+ul.rdrSeasonNav li a.rdrFilterSeason:hover {
+  background: #2d3748 !important;
+  color: #e8b400 !important;
+  border-color: #e8b400 !important;
+}
+ul.rdrSeasonNav li.cur a.rdrFilterSeason {
+  background: #2d3748 !important;
+  color: #e8b400 !important;
+  border-color: #e8b400 !important;
+}
+
 /* ── SIDEBAR / PANELS ────────────────────────────────────── */
 .sidebar, .right-bar, .aside, aside,
 div[class*="side"], div[class*="panel"] {
