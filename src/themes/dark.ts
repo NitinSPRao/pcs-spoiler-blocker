@@ -1,0 +1,174 @@
+export const DARK_THEME_CSS = `
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&display=swap');
+
+/* ── BASE ────────────────────────────────────────────────── */
+body {
+  background: #1a2030 !important;
+  color: #e8edf3 !important;
+}
+
+/* ── LAYOUT CONTAINERS ───────────────────────────────────── */
+.wrapper, .page, #page, .main, #main,
+.content, #content, .cont, .page-content,
+.left-cont, .right-cont, .center-cont,
+div[class*="cont"], div[class*="content"] {
+  background: #1a2030 !important;
+  color: #e8edf3 !important;
+}
+
+/* ── NAVIGATION ──────────────────────────────────────────── */
+ul.topnav, ul.topnav li, ul.topnav li a,
+nav, nav li, nav a,
+.sitenav, .sitenav li, .sitenav a {
+  background: #252d3a !important;
+  color: #c8d0db !important;
+}
+ul.topnav { border-bottom: 2px solid #e8b400 !important; }
+ul.topnav li a:hover, nav a:hover { color: #e8b400 !important; }
+
+/* dropdown menus */
+ul.topnav ul, nav ul ul {
+  background: #2d3748 !important;
+  border: 1px solid #3a4556 !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5) !important;
+}
+ul.topnav ul li a:hover { background: #3a4556 !important; }
+
+/* ── SECTION HEADERS (h4bar) ─────────────────────────────── */
+.h4bar {
+  background: #252d3a !important;
+  border-left: 3px solid #e8b400 !important;
+  border-bottom: 1px solid #3a4556 !important;
+}
+.h4bar h4, .h4bar h3, .h4bar h2 {
+  color: #fff !important;
+  font-family: 'Barlow Condensed', Arial, sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+/* standalone headings */
+h1, h2, h3, h4, h5 {
+  color: #e8edf3 !important;
+  font-family: 'Barlow Condensed', Arial, sans-serif !important;
+}
+
+/* ── TABLES ──────────────────────────────────────────────── */
+table {
+  background: #252d3a !important;
+  border-color: #3a4556 !important;
+}
+thead tr, table tr.header, table tr:first-child th {
+  background: #2d3748 !important;
+}
+th {
+  background: #2d3748 !important;
+  color: #e8b400 !important;
+  border-color: #3a4556 !important;
+  font-family: 'Barlow Condensed', Arial, sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  font-size: 11px !important;
+}
+td {
+  background: transparent !important;
+  border-color: #3a4556 !important;
+  color: #e8edf3 !important;
+}
+tbody tr:nth-child(even) td { background: #1f2738 !important; }
+tbody tr:hover td { background: #2d3748 !important; }
+
+/* rank 1 highlight */
+tbody tr:first-child td {
+  border-left: 2px solid #e8b400 !important;
+}
+
+/* ── LINKS ───────────────────────────────────────────────── */
+a { color: #9db4cc !important; }
+a:hover { color: #e8b400 !important; }
+a:visited { color: #7a95ad !important; }
+
+/* rider names — gold */
+.ridername a, a.rider, td.name a, .name a {
+  color: #e8b400 !important;
+  font-weight: 600 !important;
+}
+.ridername a:hover, a.rider:hover { color: #ffc700 !important; }
+
+/* team names — muted */
+.team a, td.team a { color: #8896a8 !important; }
+.team a:hover { color: #c8d0db !important; }
+
+/* ── RANKINGS / TIME / DATA CELLS ────────────────────────── */
+.ar, .rnk, td:first-child {
+  color: #8896a8 !important;
+  font-family: 'Barlow Condensed', Arial, sans-serif !important;
+}
+.time, .gap, .result { font-family: 'Barlow Condensed', Arial, sans-serif !important; }
+td:first-child { font-weight: 700 !important; }
+
+/* DNF / DNS / OTL */
+.dnf, .dns, .otl, .abandon { color: #e05252 !important; }
+
+/* ── HOMEPAGE RESULT LISTS ───────────────────────────────── */
+ul.hp2-results { background: #1a2030 !important; }
+ul.hp2-results li.race {
+  border-bottom: 1px solid #3a4556 !important;
+  background: #252d3a !important;
+}
+ul.hp2-results li.race:hover { background: #2d3748 !important; }
+ul.hp2-results li.race a { color: #e8edf3 !important; }
+ul.hp2-results li.race a:hover { color: #e8b400 !important; }
+
+/* ── BUTTONS ─────────────────────────────────────────────── */
+.btn, button, input[type=submit], input[type=button],
+a.button, .button {
+  background: #2d3748 !important;
+  color: #e8edf3 !important;
+  border: 1px solid #3a4556 !important;
+}
+.btn:hover, button:hover { background: #3a4556 !important; }
+.btn-primary, a.btn-blue, .btn-blue {
+  background: #e8b400 !important;
+  color: #111 !important;
+  border-color: #e8b400 !important;
+}
+.btn-primary:hover { background: #ffc700 !important; }
+
+/* ── SIDEBAR / PANELS ────────────────────────────────────── */
+.sidebar, .right-bar, .aside, aside,
+div[class*="side"], div[class*="panel"] {
+  background: #1f2738 !important;
+  border-color: #3a4556 !important;
+}
+
+/* ── FORMS / INPUTS ──────────────────────────────────────── */
+input[type=text], input[type=search], select, textarea {
+  background: #2d3748 !important;
+  color: #e8edf3 !important;
+  border: 1px solid #3a4556 !important;
+}
+input::placeholder { color: #5a6a7e !important; }
+
+/* ── MISC ACCENTS ────────────────────────────────────────── */
+.blue, .highlight, .active, .selected {
+  background: #e8b400 !important;
+  color: #111 !important;
+}
+hr, .divider, .separator { border-color: #3a4556 !important; }
+
+/* category badges */
+.cat, .category, span[class*="cat"] {
+  background: #2d3748 !important;
+  color: #8896a8 !important;
+  border: 1px solid #3a4556 !important;
+}
+
+/* ── SCROLLBAR ───────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #1a2030; }
+::-webkit-scrollbar-thumb { background: #3a4556; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #e8b400; }
+`
