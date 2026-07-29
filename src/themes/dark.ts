@@ -258,15 +258,25 @@ li:has(.xbar) { border-color: #3a4556 !important; }
 .xtitle a:hover { color: #e8b400 !important; }
 
 /* ── LIVESTATS PAGE ──────────────────────────────────────── */
-/* elevation profile — frame + soften chart interior */
+/* stats row (KM TO GO, RACETIME, KM DONE, AVG., etc.) */
+ul.ls5b-kpi, ul.ls5b-kpi * {
+  font-family: 'Barlow Condensed', Arial, sans-serif !important;
+}
+ul.ls5b-kpi li span {
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+ul.ls5b-kpi li div { font-weight: 700 !important; }
+
+/* elevation profile — frame chart in dark card, keep interior natural */
 .profileWrapper {
   background: #1a2030 !important;
   border: 1px solid #3a4556 !important;
   border-radius: 4px !important;
-  padding: 4px !important;
+  padding: 8px !important;
   overflow: hidden !important;
+  margin: 4px 0 !important;
 }
-/* chart interior kept natural — framed by .profileWrapper card */
 .xyProfile { border-radius: 3px !important; overflow: hidden !important; }
 /* detail profile panel — same treatment */
 .detailProfileCont {
