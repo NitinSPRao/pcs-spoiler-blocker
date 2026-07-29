@@ -113,29 +113,33 @@ td:first-child { font-weight: 700 !important; }
 .dnf, .dns, .otl, .abandon { color: #e05252 !important; }
 
 /* ── HOMEPAGE LIVESTATS WIDGET (ul.hp3-livestats) ───────────── */
-ul.hp3-livestats { background: #1a2030 !important; }
+/* keep original card colors — frame each card, fix fonts */
+ul.hp3-livestats { background: transparent !important; }
 ul.hp3-livestats li {
-  background: #252d3a !important;
-  border-bottom: 1px solid #3a4556 !important;
+  border: 1px solid #3a4556 !important;
+  border-radius: 4px !important;
+  overflow: hidden !important;
+  margin-bottom: 6px !important;
 }
-ul.hp3-livestats li a {
-  background: #252d3a !important;
-  color: #e8edf3 !important;
-  text-decoration: none !important;
+ul.hp3-livestats li a { text-decoration: none !important; }
+ul.hp3-livestats span.title {
+  font-family: 'Barlow Condensed', Arial, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  letter-spacing: 0.04em !important;
 }
-ul.hp3-livestats li a:hover { background: #2d3748 !important; }
-ul.hp3-livestats span.title { color: #9db4cc !important; }
-ul.hp3-livestats span.status.live {
-  background: #b83030 !important;
-  color: #fff !important;
+ul.hp3-livestats span.status {
+  font-family: 'Barlow Condensed', Arial, sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
 }
 ul.hp3-livestats div.togo {
-  background: #1a2030 !important;
-  color: #e8edf3 !important;
-  border-color: #3a4556 !important;
+  font-family: 'Barlow Condensed', Arial, sans-serif !important;
+  font-weight: 700 !important;
 }
-/* progress bar div has inline gradient (#fff → #c3db23) — left as-is to preserve race progress info */
-ul.hp3-livestats div.situ_txt { color: #8896a8 !important; }
+ul.hp3-livestats div.situ_txt {
+  font-family: 'Barlow Condensed', Arial, sans-serif !important;
+}
 
 /* ── HOMEPAGE GAMES WIDGET (ul.hp-games) ─────────────────── */
 ul.hp-games { background: #1f2738 !important; list-style: none !important; }
@@ -262,8 +266,8 @@ li:has(.xbar) { border-color: #3a4556 !important; }
   padding: 4px !important;
   overflow: hidden !important;
 }
-/* soften white SVG background without inverting chart colors */
-.xyProfile { filter: brightness(0.82) !important; border-radius: 3px !important; overflow: hidden !important; }
+/* chart interior kept natural — framed by .profileWrapper card */
+.xyProfile { border-radius: 3px !important; overflow: hidden !important; }
 /* detail profile panel — same treatment */
 .detailProfileCont {
   background: #1a2030 !important;
