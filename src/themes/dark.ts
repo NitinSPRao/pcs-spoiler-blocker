@@ -207,8 +207,9 @@ div.bg.orange  { background: #d97820 !important; }
 div.bg.yellow  { background: #c9a200 !important; }
 div.bg.green   { background: #2a9858 !important; }
 .valuebar .title { color: #1a1000 !important; }
-/* rider profile specialty bars — do NOT override div.bg.red (team jersey colors) */
+/* rider profile specialty bars */
 div.bg.green2  { background: #259858 !important; }
+div.bg.red     { background: #b83030 !important; }
 div.bg.blue    { background: #2870c8 !important; }
 div.bg.purple1 { background: #6e38b0 !important; }
 div.bg.pink    { background: #c03870 !important; }
