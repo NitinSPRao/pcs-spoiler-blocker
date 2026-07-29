@@ -195,9 +195,9 @@ li.follow-up a:hover {
 
 /* ── RANKING / POPULARITY BARS (div.valuebar) ───────────────── */
 .valuebar { background: #1a2030 !important; }
-div.bg.orange { background: #c47a00 !important; }
-div.bg.yellow { background: #c8a200 !important; }
-div.bg.green  { background: #228050 !important; }
+div.bg.orange { background: #d97820 !important; }
+div.bg.yellow { background: #c9a200 !important; }
+div.bg.green  { background: #2a9858 !important; }
 .valuebar .title {
   color: #1a1000 !important;
 }
