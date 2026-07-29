@@ -23,6 +23,10 @@ bd close <id>         # Complete work
 bd dolt push          # Push beads data to remote
 ```
 
+## Theme Development
+
+When building or refining a theme, **any new selector, DOM structure, or fix discovered through DevTools inspection must be added to `docs/theme-runbook.md` immediately** — before or alongside the commit that uses it. The runbook is the single source of truth for creating a new theme one-shot without re-discovering DOM details. This applies to every change: new selectors, override patterns, confirmed class names, caveats about specific elements, anything that took inspection to figure out.
+
 ## Non-Interactive Shell Commands
 
 **ALWAYS use non-interactive flags** with file operations to avoid hanging on confirmation prompts.

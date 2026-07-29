@@ -125,6 +125,10 @@ git commit -m "feat: add content script entry point"
 
 Do not push unless user explicitly asks.
 
+## Theme Development
+
+When building or refining a theme, **any new selector, DOM structure, or fix discovered through DevTools inspection must be added to `docs/theme-runbook.md` immediately** — before or alongside the commit that uses it. The runbook is the single source of truth for creating a new theme one-shot without re-discovering DOM details. This applies to every change: new selectors, override patterns, confirmed class names, caveats about specific elements, anything that took inspection to figure out.
+
 ## Conventions
 
 - TypeScript strict mode always on
