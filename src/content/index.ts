@@ -11,7 +11,7 @@ function isHomepage(): boolean {
   const { hostname, pathname } = window.location
   return (
     hostname === 'www.procyclingstats.com' &&
-    (pathname === '/' || pathname === '')
+    (pathname === '/' || pathname === '' || pathname === '/index.php')
   )
 }
 
