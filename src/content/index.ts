@@ -1,6 +1,6 @@
 const STORAGE_KEY_PREFIX = 'revealed-'
 const HIDE_CLASS = 'pcs-sb-results-today'
-const RESULTS_HEADING_TEXT = 'Results today'
+const RESULTS_HEADING_TEXTS = ['Results today']
 
 function todayISO(): string {
   return new Date().toISOString().slice(0, 10)
@@ -21,7 +21,7 @@ function isHomepage(): boolean {
 function injectPreHideStyle(): void {
   const style = document.createElement('style')
   style.textContent = `
-    .${HIDE_CLASS} { visibility: hidden !important; }
+    .${HIDE_CLASS} { display: none !important; }
   `
   document.documentElement.appendChild(style)
 }
@@ -55,17 +55,28 @@ function injectBannerStyle(): void {
   document.head.appendChild(style)
 }
 
-function findResultsTodayUl(): Element | null {
-  const headings = document.querySelectorAll('h3.black-info-title')
-  for (const h3 of headings) {
-    if (h3.textContent?.trim() === RESULTS_HEADING_TEXT) {
-      const sibling = h3.nextElementSibling
-      if (sibling?.classList.contains('hp2-results')) {
-        return sibling
-      }
+function findNextResultsUl(bar: Element): Element | null {
+  let next = bar.nextElementSibling
+  while (next && !next.classList.contains('h4bar')) {
+    if (next.classList.contains('hp2-results') && next.querySelector('li.race')) {
+      return next
     }
+    next = next.nextElementSibling
   }
   return null
+}
+
+function findResultsUls(): Element[] {
+  const results: Element[] = []
+  const bars = document.querySelectorAll('div.h4bar')
+  for (const bar of bars) {
+    const h4 = bar.querySelector('h4')
+    if (h4 && RESULTS_HEADING_TEXTS.includes(h4.textContent?.trim() ?? '')) {
+      const ul = findNextResultsUl(bar)
+      if (ul) results.push(ul)
+    }
+  }
+  return results
 }
 
 function createBanner(resultsUl: Element): HTMLElement {
@@ -91,18 +102,21 @@ function reveal(resultsUl: Element, banner: Element): void {
 }
 
 function applyBlock(): void {
-  const resultsUl = findResultsTodayUl()
-  if (!resultsUl) return
+  const uls = findResultsUls()
+  if (uls.length === 0) return
 
   injectBannerStyle()
-  resultsUl.classList.add(HIDE_CLASS)
+  const key = storageKey()
 
-  const banner = createBanner(resultsUl)
-  resultsUl.insertAdjacentElement('beforebegin', banner)
-
-  chrome.storage.local.get(storageKey(), (items) => {
-    if (items[storageKey()] === true) {
-      reveal(resultsUl, banner)
+  chrome.storage.local.get(key, (items) => {
+    const alreadyRevealed = items[key] === true
+    for (const ul of uls) {
+      ul.classList.add(HIDE_CLASS)
+      const banner = createBanner(ul)
+      ul.insertAdjacentElement('beforebegin', banner)
+      if (alreadyRevealed) {
+        reveal(ul, banner)
+      }
     }
   })
 }
