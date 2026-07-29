@@ -121,6 +121,41 @@ ul.hp2-results li.race:hover { background: #2d3748 !important; }
 ul.hp2-results li.race a { color: #e8edf3 !important; }
 ul.hp2-results li.race a:hover { color: #e8b400 !important; }
 
+/* stage subtitle inline color override (#1f8acc cyan → gold) */
+ul.hp2-results li.race a span { color: #e8b400 !important; }
+
+/* VIEW RESULTS / GC / LIVESTATS buttons (a.goto-race) */
+a.goto-race {
+  display: inline-block !important;
+  padding: 4px 12px !important;
+  background: #252d3a !important;
+  color: #e8edf3 !important;
+  border: 1px solid #3a4556 !important;
+  font-family: 'Barlow Condensed', Arial, sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  font-size: 11px !important;
+  text-decoration: none !important;
+  margin-right: 4px !important;
+  transition: background 0.12s, border-color 0.12s !important;
+}
+a.goto-race:hover {
+  background: #2d3748 !important;
+  color: #e8b400 !important;
+  border-color: #e8b400 !important;
+}
+a.goto-race.livestats {
+  background: #1a3d28 !important;
+  color: #52c27a !important;
+  border-color: #2a5a3a !important;
+}
+a.goto-race.livestats:hover {
+  background: #22502f !important;
+  color: #6ad48a !important;
+  border-color: #52c27a !important;
+}
+
 /* ── BUTTONS ─────────────────────────────────────────────── */
 .btn, button, input[type=submit], input[type=button],
 a.button, .button {
