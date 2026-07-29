@@ -155,6 +155,11 @@ function createBanner(resultsUl: Element): HTMLElement {
     <button class="pcs-sb-reveal-btn">Reveal Spoilers</button>
   `
 
+  banner.addEventListener('click', (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+  })
+
   const btn = banner.querySelector('.pcs-sb-reveal-btn')!
   // TODO: restore persistence before shipping
   btn.addEventListener('click', () => {
