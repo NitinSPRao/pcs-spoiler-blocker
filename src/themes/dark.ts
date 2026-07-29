@@ -246,6 +246,26 @@ ul.rdrSeasonNav li.cur a.rdrFilterSeason {
   border-color: #e8b400 !important;
 }
 
+/* sort + filter buttons (DATE / RESULT / NO FILTER / CLIMBER etc) */
+a.rdrFilterSort, a.rdrFilterFilter {
+  background: #252d3a !important;
+  color: #8896a8 !important;
+  border: 1px solid #3a4556 !important;
+  text-decoration: none !important;
+}
+a.rdrFilterSort:hover, a.rdrFilterFilter:hover {
+  background: #2d3748 !important;
+  color: #e8b400 !important;
+  border-color: #e8b400 !important;
+}
+/* active state — cur class on parent li or on the element itself */
+li.cur a.rdrFilterSort, li.cur a.rdrFilterFilter,
+a.rdrFilterSort.cur, a.rdrFilterFilter.cur {
+  background: #2d3748 !important;
+  color: #e8b400 !important;
+  border-color: #e8b400 !important;
+}
+
 /* ── SIDEBAR / PANELS ────────────────────────────────────── */
 .sidebar, .right-bar, .aside, aside,
 div[class*="side"], div[class*="panel"] {
