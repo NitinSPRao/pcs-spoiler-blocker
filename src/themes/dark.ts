@@ -202,12 +202,20 @@ li.follow-up a:hover {
 
 /* ── RANKING / POPULARITY BARS (div.valuebar) ───────────────── */
 .valuebar { background: #1a2030 !important; }
-div.bg.orange { background: #d97820 !important; }
-div.bg.yellow { background: #c9a200 !important; }
-div.bg.green  { background: #2a9858 !important; }
-.valuebar .title {
-  color: #1a1000 !important;
-}
+/* homepage popularity bars */
+div.bg.orange  { background: #d97820 !important; }
+div.bg.yellow  { background: #c9a200 !important; }
+div.bg.green   { background: #2a9858 !important; }
+.valuebar .title { color: #1a1000 !important; }
+/* rider profile specialty bars — do NOT override div.bg.red (team jersey colors) */
+div.bg.green2  { background: #259858 !important; }
+div.bg.blue    { background: #2870c8 !important; }
+div.bg.purple1 { background: #6e38b0 !important; }
+div.bg.pink    { background: #c03870 !important; }
+/* specialty bar text */
+.xvalue { color: #e8edf3 !important; }
+.xtitle a { color: #8896a8 !important; }
+.xtitle a:hover { color: #e8b400 !important; }
 
 /* ── SIDEBAR / PANELS ────────────────────────────────────── */
 .sidebar, .right-bar, .aside, aside,
