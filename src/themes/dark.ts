@@ -119,8 +119,12 @@ ul.hp-games li div {
   background: #252d3a !important;
   border: 1px solid #3a4556 !important;
 }
-ul.hp-games li div a { color: #c8d0db !important; text-decoration: none !important; }
-ul.hp-games li div a:hover { color: #e8b400 !important; border-color: #e8b400 !important; }
+ul.hp-games li div a {
+  background: #252d3a !important;
+  color: #c8d0db !important;
+  text-decoration: none !important;
+}
+ul.hp-games li div a:hover { background: #2d3748 !important; color: #e8b400 !important; }
 
 /* ── HOMEPAGE RESULT LISTS ───────────────────────────────── */
 ul.hp2-results { background: #1a2030 !important; }
