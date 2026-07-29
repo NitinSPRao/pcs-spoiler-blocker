@@ -2,24 +2,153 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&display=swap" />
     <style>
-      * { box-sizing: border-box; margin: 0; padding: 0; }
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
       body {
-        font-family: system-ui, sans-serif;
-        width: 240px;
-        padding: 16px;
-        background: #fff;
-        color: #111;
+        width: 260px;
+        background: #1a2030;
+        color: #e8edf3;
+        font-family: 'Barlow Condensed', Arial, sans-serif;
+        overflow: hidden;
       }
-      h1 { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
-      #status { font-size: 12px; color: #555; }
+
+      /* ── HEADER ── */
+      .popup-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 16px 12px;
+        border-bottom: 2px solid #e8b400;
+        background: #252d3a;
+      }
+      .popup-header svg {
+        color: #e8b400;
+        flex-shrink: 0;
+      }
+      .popup-title {
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #fff;
+        line-height: 1;
+      }
+      .popup-subtitle {
+        font-size: 10px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #8896a8;
+        margin-top: 2px;
+      }
+
+      /* ── ROWS ── */
+      .popup-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 13px 16px;
+        border-bottom: 1px solid #2d3748;
+      }
+      .popup-row:last-child { border-bottom: none; }
+      .row-label {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #c8d0db;
+      }
+      .row-sublabel {
+        font-size: 10px;
+        letter-spacing: 0.05em;
+        color: #5a6a7e;
+        margin-top: 2px;
+        text-transform: uppercase;
+      }
+
+      /* ── STATUS BADGE ── */
+      .badge {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 3px 8px;
+        border-radius: 2px;
+        background: #1f3a28;
+        color: #52c27a;
+        border: 1px solid #2a4d35;
+      }
+
+      /* ── TOGGLE ── */
+      .toggle-wrap { position: relative; flex-shrink: 0; }
+      .toggle-wrap input { position: absolute; opacity: 0; width: 0; height: 0; }
+      .toggle-track {
+        display: block;
+        width: 36px;
+        height: 20px;
+        background: #3a4556;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.2s;
+        position: relative;
+      }
+      .toggle-knob {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 14px;
+        height: 14px;
+        background: #8896a8;
+        border-radius: 50%;
+        transition: transform 0.2s, background 0.2s;
+      }
+      .toggle-wrap input:checked + .toggle-track { background: #a07c00; }
+      .toggle-wrap input:checked + .toggle-track .toggle-knob {
+        transform: translateX(16px);
+        background: #e8b400;
+      }
     </style>
   </head>
   <body>
-    <div id="app">
-      <h1>PCS Spoiler Blocker</h1>
-      <p id="status">Loading...</p>
+    <!-- Header -->
+    <div class="popup-header">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/>
+        <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/>
+        <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+        <line x1="1" y1="1" x2="23" y2="23"/>
+      </svg>
+      <div>
+        <div class="popup-title">PCS Spoiler Blocker</div>
+        <div class="popup-subtitle">procyclingstats.com</div>
+      </div>
     </div>
+
+    <!-- Spoiler protection row -->
+    <div class="popup-row">
+      <div>
+        <div class="row-label">Spoiler Protection</div>
+        <div class="row-sublabel">Results hidden until revealed</div>
+      </div>
+      <span class="badge">Active</span>
+    </div>
+
+    <!-- Theme toggle row -->
+    <div class="popup-row">
+      <div>
+        <div class="row-label">PCS Dark Theme</div>
+        <div class="row-sublabel">Navy · Gold · Barlow</div>
+      </div>
+      <label class="toggle-wrap">
+        <input type="checkbox" id="theme-toggle" />
+        <span class="toggle-track">
+          <span class="toggle-knob"></span>
+        </span>
+      </label>
+    </div>
+
     <script src="./popup.js"></script>
   </body>
 </html>
