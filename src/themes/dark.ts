@@ -213,6 +213,8 @@ div.bg.red     { background: #b83030 !important; }
 div.bg.blue    { background: #2870c8 !important; }
 div.bg.purple1 { background: #6e38b0 !important; }
 div.bg.pink    { background: #c03870 !important; }
+/* specialty bar row separators */
+li:has(.xbar) { border-color: #3a4556 !important; }
 /* specialty bar text */
 .xvalue { color: #e8edf3 !important; }
 .xtitle a { color: #8896a8 !important; }
