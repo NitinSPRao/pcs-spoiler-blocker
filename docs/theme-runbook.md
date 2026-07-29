@@ -57,6 +57,8 @@ export const <NAME>_THEME_CSS = `
 | Homepage results | `ul.hp2-results`, `li.race`, `li.race a span` (stage subtitle — has inline `style="color:#1f8acc"`, needs explicit override) |
 | Homepage games widget | `ul.hp-games li div a` (pill background `#DAE8ED` is on the `a` tag, not `div` or `li` — must override background on `a`). Also override `color` and `text-decoration` on `a`. |
 | Result card buttons | `a.goto-race` (View Results, GC buttons), `a.goto-race.livestats` (LiveStats button — different color). Set `display:inline-block`, `text-decoration:none`, border on hover. |
+| Rider season nav | `ul.rdrSeasonNav li a.rdrFilterSeason` (year pills), `ul.rdrSeasonNav li.cur a.rdrFilterSeason` (active year — `cur` on parent `li`). |
+| Rider sort/filter buttons | `a.rdrFilterSort` (DATE / RESULT / PCS POINTS), `a.rdrFilterFilter` (NO FILTER / CLIMBER / HILLS / SPRINTS / TIME TRIALS / CLASSICS). No active-state class exists on these — PCS does not mark the selected sort/filter. |
 | Buttons | `.btn`, `button`, `input[type=submit]`, `li.follow-up a` (widget footer buttons: "PCS Ranking", "Popular Riders", etc) |
 | Sidebar/panels | `.sidebar`, `.right-bar`, `aside` |
 | Forms/inputs | `input[type=text]`, `select`, `textarea` |
