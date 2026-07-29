@@ -52,7 +52,7 @@ export const <NAME>_THEME_CSS = `
 | Links | `a`, `a:hover`, `a:visited`, `.ridername a`, `.team a` |
 | Data cells | `.ar`, `.rnk`, `.time`, `.gap`, `td:first-child` |
 | Status classes | `.dnf`, `.dns`, `.otl` |
-| Ranking/stat bars | `.blue`, `.bar`, `.pnt`, `div.bar` (inspect PCS — class may change) |
+| Ranking/stat bars | `div.valuebar` (container), `div.bg.orange` / `div.bg.yellow` / `div.bg.green` (bar fill), `.valuebar .title` (number label). Structure: `.valuebar > .bg[color class] + .title`. Do NOT override `div.bg.red` — used for team-specific jersey colors. |
 | Homepage results | `ul.hp2-results`, `li.race` |
 | Buttons | `.btn`, `button`, `input[type=submit]`, `li.follow-up a` (widget footer buttons: "PCS Ranking", "Popular Riders", etc) |
 | Sidebar/panels | `.sidebar`, `.right-bar`, `aside` |
