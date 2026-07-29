@@ -112,6 +112,31 @@ td:first-child { font-weight: 700 !important; }
 /* DNF / DNS / OTL */
 .dnf, .dns, .otl, .abandon { color: #e05252 !important; }
 
+/* ── HOMEPAGE LIVESTATS WIDGET (ul.hp3-livestats) ───────────── */
+ul.hp3-livestats { background: #1a2030 !important; }
+ul.hp3-livestats li {
+  background: #252d3a !important;
+  border-bottom: 1px solid #3a4556 !important;
+}
+ul.hp3-livestats li a {
+  background: #252d3a !important;
+  color: #e8edf3 !important;
+  text-decoration: none !important;
+}
+ul.hp3-livestats li a:hover { background: #2d3748 !important; }
+ul.hp3-livestats span.title { color: #9db4cc !important; }
+ul.hp3-livestats span.status.live {
+  background: #b83030 !important;
+  color: #fff !important;
+}
+ul.hp3-livestats div.togo {
+  background: #1a2030 !important;
+  color: #e8edf3 !important;
+  border-color: #3a4556 !important;
+}
+/* progress bar div has inline gradient (#fff → #c3db23) — left as-is to preserve race progress info */
+ul.hp3-livestats div.situ_txt { color: #8896a8 !important; }
+
 /* ── HOMEPAGE GAMES WIDGET (ul.hp-games) ─────────────────── */
 ul.hp-games { background: #1f2738 !important; list-style: none !important; }
 ul.hp-games li { background: transparent !important; }
@@ -227,6 +252,30 @@ li:has(.xbar) { border-color: #3a4556 !important; }
 .xvalue { color: #e8edf3 !important; }
 .xtitle a { color: #8896a8 !important; }
 .xtitle a:hover { color: #e8b400 !important; }
+
+/* ── LIVESTATS PAGE ──────────────────────────────────────── */
+/* elevation profile containers */
+.xyProfile, .kmdone, .profilePerc,
+.profileWrapper, .profileBG, .xyProfileCont {
+  background: #1a2030 !important;
+}
+/* detail profile panel */
+.detailProfileCont, .detailProfile { background: #1a2030 !important; }
+.detailProfileCont > div { border-color: #3a4556 !important; }
+/* view keypoints table button */
+a.viewKeypoints {
+  display: block !important;
+  background: #252d3a !important;
+  color: #8896a8 !important;
+  border: 1px solid #3a4556 !important;
+  text-decoration: none !important;
+  text-align: center !important;
+}
+a.viewKeypoints:hover {
+  background: #2d3748 !important;
+  color: #e8b400 !important;
+  border-color: #e8b400 !important;
+}
 
 /* ── RIDER SEASON NAV (ul.rdrSeasonNav) ──────────────────── */
 ul.rdrSeasonNav li a.rdrFilterSeason {
