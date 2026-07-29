@@ -254,14 +254,16 @@ li:has(.xbar) { border-color: #3a4556 !important; }
 .xtitle a:hover { color: #e8b400 !important; }
 
 /* ── LIVESTATS PAGE ──────────────────────────────────────── */
-/* elevation profile — frame the chart in a dark card, leave interior natural */
+/* elevation profile — frame + soften chart interior */
 .profileWrapper {
   background: #1a2030 !important;
   border: 1px solid #3a4556 !important;
   border-radius: 4px !important;
-  padding: 6px !important;
+  padding: 4px !important;
   overflow: hidden !important;
 }
+/* soften white SVG background without inverting chart colors */
+.xyProfile { filter: brightness(0.82) !important; border-radius: 3px !important; overflow: hidden !important; }
 /* detail profile panel — same treatment */
 .detailProfileCont {
   background: #1a2030 !important;
