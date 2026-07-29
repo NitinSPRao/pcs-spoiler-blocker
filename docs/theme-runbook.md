@@ -54,7 +54,7 @@ export const <NAME>_THEME_CSS = `
 | Status classes | `.dnf`, `.dns`, `.otl` |
 | Ranking/stat bars | `.blue`, `.bar`, `.pnt`, `div.bar` (inspect PCS — class may change) |
 | Homepage results | `ul.hp2-results`, `li.race` |
-| Buttons | `.btn`, `button`, `input[type=submit]`, PCS-specific button classes (inspect) |
+| Buttons | `.btn`, `button`, `input[type=submit]`, `li.follow-up a` (widget footer buttons: "PCS Ranking", "Popular Riders", etc) |
 | Sidebar/panels | `.sidebar`, `.right-bar`, `aside` |
 | Forms/inputs | `input[type=text]`, `select`, `textarea` |
 | Scrollbar | `::-webkit-scrollbar*` |

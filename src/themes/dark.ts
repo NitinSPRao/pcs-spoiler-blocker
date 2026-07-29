@@ -136,6 +136,28 @@ a.button, .button {
 }
 .btn-primary:hover { background: #ffc700 !important; }
 
+/* follow-up widget buttons: "PCS Ranking", "Popular Riders", etc */
+li.follow-up { list-style: none !important; }
+li.follow-up a {
+  display: inline-block !important;
+  padding: 6px 16px !important;
+  background: #252d3a !important;
+  color: #e8b400 !important;
+  border: 1px solid #3a4556 !important;
+  font-family: 'Barlow Condensed', Arial, sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  font-size: 11px !important;
+  text-decoration: none !important;
+  transition: background 0.15s !important;
+}
+li.follow-up a:hover {
+  background: #2d3748 !important;
+  color: #ffc700 !important;
+  border-color: #e8b400 !important;
+}
+
 /* ── SIDEBAR / PANELS ────────────────────────────────────── */
 .sidebar, .right-bar, .aside, aside,
 div[class*="side"], div[class*="panel"] {
