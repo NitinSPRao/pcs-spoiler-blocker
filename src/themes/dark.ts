@@ -254,13 +254,21 @@ li:has(.xbar) { border-color: #3a4556 !important; }
 .xtitle a:hover { color: #e8b400 !important; }
 
 /* ── LIVESTATS PAGE ──────────────────────────────────────── */
-/* elevation profile containers */
-.xyProfile, .kmdone, .profilePerc,
-.profileWrapper, .profileBG, .xyProfileCont {
+/* elevation profile — frame the chart in a dark card, leave interior natural */
+.profileWrapper {
   background: #1a2030 !important;
+  border: 1px solid #3a4556 !important;
+  border-radius: 4px !important;
+  padding: 6px !important;
+  overflow: hidden !important;
 }
-/* detail profile panel */
-.detailProfileCont, .detailProfile { background: #1a2030 !important; }
+/* detail profile panel — same treatment */
+.detailProfileCont {
+  background: #1a2030 !important;
+  border: 1px solid #3a4556 !important;
+  border-radius: 4px !important;
+  padding: 8px !important;
+}
 .detailProfileCont > div { border-color: #3a4556 !important; }
 /* view keypoints table button */
 a.viewKeypoints {
