@@ -58,6 +58,7 @@ table {
   background: #252d3a !important;
   border-color: #3a4556 !important;
 }
+tr { border-color: #3a4556 !important; }
 thead tr, table tr.header, table tr:first-child th {
   background: #2d3748 !important;
 }
@@ -110,6 +111,12 @@ td:first-child { font-weight: 700 !important; }
 
 /* DNF / DNS / OTL */
 .dnf, .dns, .otl, .abandon { color: #e05252 !important; }
+
+/* ── HOMEPAGE GAMES WIDGET (ul.hp-games) ─────────────────── */
+ul.hp-games { background: #1f2738 !important; list-style: none !important; }
+ul.hp-games li { border-bottom: 1px solid #3a4556 !important; background: #252d3a !important; }
+ul.hp-games li a { color: #c8d0db !important; text-decoration: none !important; }
+ul.hp-games li a:hover { color: #e8b400 !important; }
 
 /* ── HOMEPAGE RESULT LISTS ───────────────────────────────── */
 ul.hp2-results { background: #1a2030 !important; }
