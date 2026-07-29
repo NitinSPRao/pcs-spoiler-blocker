@@ -1,10 +1,9 @@
 export const DARK_THEME_CSS = `
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&display=swap');
-
 /* ── BASE ────────────────────────────────────────────────── */
 body {
   background: #1a2030 !important;
   color: #e8edf3 !important;
+  font-family: 'Barlow Condensed', Arial, sans-serif !important;
 }
 
 /* ── LAYOUT CONTAINERS ───────────────────────────────────── */
@@ -153,9 +152,13 @@ input[type=text], input[type=search], select, textarea {
 input::placeholder { color: #5a6a7e !important; }
 
 /* ── MISC ACCENTS ────────────────────────────────────────── */
-.blue, .highlight, .active, .selected {
-  background: #e8b400 !important;
-  color: #111 !important;
+.blue {
+  background: #252d3a !important;
+  color: #e8b400 !important;
+}
+.highlight, .active, .selected {
+  background: #2d3748 !important;
+  color: #e8b400 !important;
 }
 hr, .divider, .separator { border-color: #3a4556 !important; }
 
