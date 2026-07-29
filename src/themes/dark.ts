@@ -160,12 +160,11 @@ li.follow-up a:hover {
 
 /* ── RANKING / POPULARITY BARS (div.valuebar) ───────────────── */
 .valuebar { background: #1a2030 !important; }
-.valuebar .bg,
-div.bg.orange, div.bg.yellow, div.bg.green {
-  background: #3d2d00 !important;
-}
+div.bg.orange { background: #c47a00 !important; }
+div.bg.yellow { background: #c8a200 !important; }
+div.bg.green  { background: #228050 !important; }
 .valuebar .title {
-  color: #e8b400 !important;
+  color: #1a1000 !important;
 }
 
 /* ── SIDEBAR / PANELS ────────────────────────────────────── */
