@@ -258,14 +258,14 @@ li:has(.xbar) { border-color: #3a4556 !important; }
 .xtitle a:hover { color: #e8b400 !important; }
 
 /* ── LIVESTATS PAGE ──────────────────────────────────────── */
-/* stats row — top half of unified card (gold top, dark sides, no bottom border) */
+/* stats row — top half of unified card, white bg matching chart */
 ul.ls5b-kpi {
-  border-top: 2px solid #e8b400 !important;
+  border-top: 1px solid #3a4556 !important;
   border-left: 1px solid #3a4556 !important;
   border-right: 1px solid #3a4556 !important;
   border-bottom: none !important;
   border-radius: 4px 4px 0 0 !important;
-  background: #252d3a !important;
+  background: #ffffff !important;
   padding: 10px 12px !important;
   box-sizing: border-box !important;
 }
@@ -273,10 +273,11 @@ ul.ls5b-kpi, ul.ls5b-kpi * {
   font-family: 'Barlow Condensed', Arial, sans-serif !important;
 }
 ul.ls5b-kpi li span {
+  color: #5a6070 !important;
   letter-spacing: 0.08em !important;
   text-transform: uppercase !important;
 }
-ul.ls5b-kpi li div { font-weight: 700 !important; }
+ul.ls5b-kpi li div { color: #1a2030 !important; font-weight: 700 !important; }
 
 /* elevation profile — bottom half of unified card (dark sides+bottom, no top border) */
 .profileWrapper {
