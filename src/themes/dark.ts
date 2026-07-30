@@ -268,16 +268,15 @@ ul.ls5b-kpi li span {
 }
 ul.ls5b-kpi li div { font-weight: 700 !important; }
 
-/* elevation profile — frame chart in dark card, keep interior natural */
+/* elevation profile — border only, no bg/padding override (yellowgreen is part of chart design) */
 .profileWrapper {
-  background: #1a2030 !important;
-  border: 1px solid #3a4556 !important;
+  border-top: 2px solid #e8b400 !important;
+  border-left: 1px solid #3a4556 !important;
+  border-right: 1px solid #3a4556 !important;
+  border-bottom: 1px solid #3a4556 !important;
   border-radius: 4px !important;
-  padding: 8px !important;
   overflow: hidden !important;
-  margin: 4px 0 !important;
 }
-.xyProfile { border-radius: 3px !important; overflow: hidden !important; }
 /* detail profile panel — same treatment */
 .detailProfileCont {
   background: #1a2030 !important;
