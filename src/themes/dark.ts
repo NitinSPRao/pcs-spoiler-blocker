@@ -267,8 +267,10 @@ div:has(> ul.ls5b-kpi) {
   border-radius: 4px !important;
   overflow: hidden !important;
 }
-/* SVG text inside the chart inherits color via fill — body override makes it invisible on white */
+/* SVG text inside the chart */
 div:has(> ul.ls5b-kpi) text { fill: #1a2030 !important; }
+/* climb/keypoint labels — absolutely positioned, don't inherit parent color */
+.keypointTitle, .keypointTitle * { color: #1a2030 !important; }
 /* stats row — fonts + spacing only, no border (parent div handles it) */
 ul.ls5b-kpi {
   padding: 10px 12px !important;
