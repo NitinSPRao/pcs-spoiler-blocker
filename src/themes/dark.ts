@@ -258,16 +258,20 @@ li:has(.xbar) { border-color: #3a4556 !important; }
 .xtitle a:hover { color: #e8b400 !important; }
 
 /* ── LIVESTATS PAGE ──────────────────────────────────────── */
-/* stats row — top half of unified card, white bg matching chart */
-ul.ls5b-kpi {
-  border-top: 1px solid #3a4556 !important;
-  border-left: 1px solid #3a4556 !important;
-  border-right: 1px solid #3a4556 !important;
-  border-bottom: none !important;
-  border-radius: 4px 4px 0 0 !important;
+/* unified card: white bg on the nameless parent of ul.ls5b-kpi (direct child = specific match) */
+div:has(> ul.ls5b-kpi) {
   background: #ffffff !important;
+  border: 1px solid #3a4556 !important;
+  border-top: 2px solid #e8b400 !important;
+  border-radius: 4px !important;
+  overflow: hidden !important;
+}
+/* stats row — fonts + spacing only, no border (parent div handles it) */
+ul.ls5b-kpi {
   padding: 10px 12px !important;
   box-sizing: border-box !important;
+  background: transparent !important;
+  border: none !important;
 }
 ul.ls5b-kpi, ul.ls5b-kpi * {
   font-family: 'Barlow Condensed', Arial, sans-serif !important;
@@ -279,13 +283,10 @@ ul.ls5b-kpi li span {
 }
 ul.ls5b-kpi li div { color: #1a2030 !important; font-weight: 700 !important; }
 
-/* elevation profile — bottom half of unified card (dark sides+bottom, no top border) */
+/* elevation profile — no border (parent handles it), keep chart natural */
 .profileWrapper {
-  border-top: none !important;
-  border-left: 1px solid #3a4556 !important;
-  border-right: 1px solid #3a4556 !important;
-  border-bottom: 1px solid #3a4556 !important;
-  border-radius: 0 0 4px 4px !important;
+  border: none !important;
+  border-radius: 0 !important;
   overflow: hidden !important;
 }
 /* detail profile panel — same treatment */
