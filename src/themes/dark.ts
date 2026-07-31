@@ -265,7 +265,6 @@ div:has(> ul.ls5b-kpi) {
   border: 1px solid #3a4556 !important;
   border-top: 2px solid #e8b400 !important;
   border-radius: 4px !important;
-  overflow: hidden !important;
 }
 /* SVG text inside the chart */
 div:has(> ul.ls5b-kpi) text { fill: #1a2030 !important; }
