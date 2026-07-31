@@ -261,15 +261,12 @@ li:has(.xbar) { border-color: #3a4556 !important; }
 /* unified card: white bg on the nameless parent of ul.ls5b-kpi (direct child = specific match) */
 div:has(> ul.ls5b-kpi) {
   background: #ffffff !important;
-  color: #1a2030 !important;
   border: 1px solid #3a4556 !important;
   border-top: 2px solid #e8b400 !important;
   border-radius: 4px !important;
 }
 /* SVG text inside the chart */
 div:has(> ul.ls5b-kpi) text { fill: #1a2030 !important; }
-/* climb/keypoint labels — absolutely positioned, don't inherit parent color */
-.keypointTitle, .keypointTitle * { color: #1a2030 !important; }
 /* stats row — fonts + spacing only, no border (parent div handles it) */
 ul.ls5b-kpi {
   padding: 10px 12px !important;
