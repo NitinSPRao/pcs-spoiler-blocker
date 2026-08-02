@@ -258,7 +258,14 @@ li:has(.xbar) { border-color: #3a4556 !important; }
 .xtitle a:hover { color: #e8b400 !important; }
 
 /* ── LIVESTATS PAGE ──────────────────────────────────────── */
-/* stats row — dark bg, light text */
+/* white card for stats + chart — background only, NO color (prevents sidebar cascade) */
+div:has(> ul.ls5b-kpi) {
+  background: #ffffff !important;
+  border: 1px solid #3a4556 !important;
+  border-top: 2px solid #e8b400 !important;
+  border-radius: 4px !important;
+}
+/* stats row — dark text on white bg */
 ul.ls5b-kpi {
   padding: 10px 12px !important;
   box-sizing: border-box !important;
@@ -269,13 +276,13 @@ ul.ls5b-kpi, ul.ls5b-kpi * {
   font-family: 'Barlow Condensed', Arial, sans-serif !important;
 }
 ul.ls5b-kpi li span {
-  color: #8896a8 !important;
+  color: #5a6070 !important;
   letter-spacing: 0.08em !important;
   text-transform: uppercase !important;
 }
-ul.ls5b-kpi li div { color: #e8edf3 !important; font-weight: 700 !important; }
+ul.ls5b-kpi li div { color: #1a2030 !important; font-weight: 700 !important; }
 
-/* elevation profile — white background on parent so sky shows light */
+/* elevation profile — white background on direct parent fills chart sky */
 div:has(> .profileWrapper) { background: #ffffff !important; }
 /* frame just the chart box */
 .profileWrapper {
