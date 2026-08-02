@@ -258,16 +258,7 @@ li:has(.xbar) { border-color: #3a4556 !important; }
 .xtitle a:hover { color: #e8b400 !important; }
 
 /* ── LIVESTATS PAGE ──────────────────────────────────────── */
-/* unified card: white bg on the nameless parent of ul.ls5b-kpi (direct child = specific match) */
-div:has(> ul.ls5b-kpi) {
-  background: #ffffff !important;
-  border: 1px solid #3a4556 !important;
-  border-top: 2px solid #e8b400 !important;
-  border-radius: 4px !important;
-}
-/* SVG text inside the chart */
-div:has(> ul.ls5b-kpi) text { fill: #1a2030 !important; }
-/* stats row — fonts + spacing only, no border (parent div handles it) */
+/* stats row — dark bg, light text */
 ul.ls5b-kpi {
   padding: 10px 12px !important;
   box-sizing: border-box !important;
@@ -278,18 +269,19 @@ ul.ls5b-kpi, ul.ls5b-kpi * {
   font-family: 'Barlow Condensed', Arial, sans-serif !important;
 }
 ul.ls5b-kpi li span {
-  color: #5a6070 !important;
+  color: #8896a8 !important;
   letter-spacing: 0.08em !important;
   text-transform: uppercase !important;
 }
-ul.ls5b-kpi li div { color: #1a2030 !important; font-weight: 700 !important; }
+ul.ls5b-kpi li div { color: #e8edf3 !important; font-weight: 700 !important; }
 
-/* elevation profile — no border (parent handles it), keep chart natural */
+/* elevation profile — frame just the chart box, keep yellowgreen bg natural */
 .profileWrapper {
-  border: none !important;
-  border-radius: 0 !important;
-  overflow: hidden !important;
+  border: 1px solid #3a4556 !important;
+  border-top: 2px solid #e8b400 !important;
 }
+/* climb/keypoint labels — positioned on white chart sky, need dark text */
+.keypointTitle, .keypointTitle * { color: #1a2030 !important; }
 /* detail profile panel — same treatment */
 .detailProfileCont {
   background: #1a2030 !important;
