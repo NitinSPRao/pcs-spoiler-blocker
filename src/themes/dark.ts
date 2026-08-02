@@ -284,11 +284,6 @@ ul.ls5b-kpi li div { color: #1a2030 !important; font-weight: 700 !important; }
 
 /* elevation profile — white background on direct parent fills chart sky */
 div:has(> .profileWrapper) { background: #ffffff !important; }
-/* frame just the chart box */
-.profileWrapper {
-  border: 1px solid #3a4556 !important;
-  border-top: 2px solid #e8b400 !important;
-}
 /* climb/keypoint labels — on white chart sky, need dark text */
 .keypointTitle, .keypointTitle * { color: #1a2030 !important; }
 /* detail profile panel — same treatment */
