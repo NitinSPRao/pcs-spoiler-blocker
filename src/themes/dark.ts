@@ -258,6 +258,16 @@ li:has(.xbar) { border-color: #3a4556 !important; }
 .xtitle a:hover { color: #e8b400 !important; }
 
 /* ── LIVESTATS PAGE ──────────────────────────────────────── */
+/* race navigation chips (a.blue.fs10) inside the white card */
+div:has(> ul.ls5b-kpi) a.blue {
+  background: #f0f4f8 !important;
+  color: #1a2030 !important;
+  border: 1px solid #c8d0db !important;
+}
+div:has(> ul.ls5b-kpi) a.blue:hover {
+  background: #e0e8f0 !important;
+  border-color: #e8b400 !important;
+}
 /* white card for stats + chart — background only, NO color (prevents sidebar cascade) */
 div:has(> ul.ls5b-kpi) {
   background: #ffffff !important;
