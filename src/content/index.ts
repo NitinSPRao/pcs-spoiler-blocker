@@ -46,8 +46,8 @@ function getRaceKey(li: Element): string {
 
 function getRaceName(li: Element): string {
   const link = [...li.querySelectorAll<HTMLAnchorElement>('a')]
-    .find(a => !a.classList.contains('goto-race'))
-  return link?.textContent?.trim() ?? 'Race result'
+    .find(a => !a.classList.contains('goto-race') && (a.textContent?.trim() ?? '') !== '')
+  return link?.textContent?.trim() || 'Race result'
 }
 
 function injectPreHideStyle(): void {
