@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — PCS Spoiler Blocker</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --border: #2a2d3a;
+      --accent: #e8b84b;
+      --accent2: #c0392b;
+      --text: #e2e4ec;
+      --muted: #7a7d8e;
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+    }
+
+    .header-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 28px 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo {
+      width: 44px;
+      height: 44px;
+      background: var(--accent);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .header-text h1 {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--text);
+    }
+
+    .header-text p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .stripe {
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent2) 0%, var(--accent) 50%, var(--accent2) 100%);
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 40px;
+    }
+
+    .hero h2 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: color-mix(in srgb, var(--accent) 15%, transparent);
+      color: var(--accent);
+      border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    section {
+      margin-bottom: 36px;
+    }
+
+    h3 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+    }
+
+    .card p, .card li {
+      font-size: 15px;
+      color: var(--text);
+    }
+
+    .card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .card ul li::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .card p + p {
+      margin-top: 12px;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 36px 0;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">🚴</div>
+    <div class="header-text">
+      <h1>PCS Spoiler Blocker</h1>
+      <p>Chrome Extension for procyclingstats.com</p>
+    </div>
+  </div>
+</header>
+<div class="stripe"></div>
+
+<main>
+  <div class="hero">
+    <div class="badge">Privacy Policy</div>
+    <h2>Your data stays on your device.</h2>
+    <p>PCS Spoiler Blocker collects no personal data, transmits nothing to external servers, and requires no account. Everything the extension stores lives locally in your browser.</p>
+  </div>
+
+  <section>
+    <h3>What we store</h3>
+    <div class="card">
+      <ul>
+        <li>Which races you have revealed — stored locally so results stay visible when you navigate back to the page.</li>
+        <li>The current calendar date — used solely to auto-reset spoiler blocks each new day.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h3>What we don't do</h3>
+    <div class="card">
+      <ul>
+        <li>No personal information is collected — ever.</li>
+        <li>No data is sent to any server, third party, or analytics service.</li>
+        <li>No cookies. No tracking. No fingerprinting.</li>
+        <li>Storage is never read by anyone other than the extension itself, on your device.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h3>Permissions explained</h3>
+    <div class="card">
+      <ul>
+        <li><strong>storage</strong> — saves your revealed-race state locally. Nothing leaves your device.</li>
+        <li><strong>activeTab</strong> — checks the current tab URL to show accurate status in the popup. Tab content is not read or recorded.</li>
+        <li><strong>procyclingstats.com host access</strong> — required to inject the spoiler overlay before the page renders. Scoped exclusively to this domain.</li>
+      </ul>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section>
+    <h3>Contact</h3>
+    <div class="card">
+      <p>Questions? Open an issue on <a href="https://github.com/NitinSPRao/pcs-spoiler-blocker" style="color: var(--accent); text-decoration: none;">GitHub</a>.</p>
+      <p style="margin-top: 12px; font-size: 14px; color: var(--muted);">Last updated: September 2026</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>PCS Spoiler Blocker &mdash; <a href="https://github.com/NitinSPRao/pcs-spoiler-blocker">GitHub</a></p>
+</footer>
+
+</body>
+</html>
